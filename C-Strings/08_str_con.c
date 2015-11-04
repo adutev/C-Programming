@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char* str_ncat(char*, const char*, size_t);
 
@@ -32,7 +33,7 @@ int main(int argc, char** argv) {
 
 char* str_ncat(char* dest, const char* src, size_t n) {
     size_t i;
-    size_t dest_size = strlen(dest);
+    int dest_size = strlen(dest);
 
     for (i = 0; i < n; i++) {
         if (src[i] != '\0') {

@@ -15,10 +15,27 @@
 char* sub_str(char*, int, int);
 
 int main() {
-    printf("%s\n", sub_str("Breaking Bad", 0, 2));
-    printf("%s\n",sub_str("Maniac", 3, 3));
-    printf("%s\n",sub_str("Maniac", 3, 5));
-    printf("%s\n",sub_str("Master Yoda", 13, 5));
+    char* substring1 = sub_str("Breaking Bad", 0, 2);
+    printf("%s\n", substring1);
+    if(substring1 != NULL){
+        free(substring1);
+    }
+    char* substring2 = sub_str("Maniac", 3, 3);
+    printf("%s\n",substring2);
+     if(substring2 != NULL){
+        free(substring2);
+    }
+    char* substring3 = sub_str("Maniac", 3, 5);
+    printf("%s\n", substring3);
+     if(substring3 != NULL){
+        free(substring3);
+    }
+    char* substring4 = sub_str("Master Yoda", 13, 5);    
+    printf("%s\n", substring4);
+     if(substring4 != NULL){
+        free(substring4);
+    }
+
 
     return (EXIT_SUCCESS);
 }

@@ -13,7 +13,6 @@
  * 3. 
  */
 
-char* get_equal_elements(char*, int);
 int main() {
     int n, i;
     int matches = scanf("%d", &n);
@@ -57,11 +56,12 @@ int main() {
         printf("%s\n", max_element);
     }
     
+    for (i = 0; i < n; i++) {
+        free(lines[i]);
+
+    }
+
     free(lines);
     return 0;
 }
 
-char* get_equal_elements(char* elements, int size){
-    int i;
-    
-}
